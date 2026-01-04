@@ -1,10 +1,11 @@
 const fetchMap = async () => 
 {
-    let mapId = document.getElementById("mapId")?.value
+    let mapId = document.getElementById("mapId").value
     //const fileReader = new FileReader()
     let content = await fetch("FE2_MapTest.txt")
     let chosenId = await content.text()
 
+    console.log(mapId)
     let idArray = chosenId.split("\n")
     console.log(`${mapId}\r`)
     if (!idArray.includes(`${mapId}\r`))
