@@ -6,8 +6,8 @@ const fetchMap = async () =>
     let chosenId = await content.text()
 
     let idArray = chosenId.split("\n")
-    console.log(idArray)
-    if (!idArray.includes(chosenId))
+    //console.log(idArray)
+    if (!idArray.includes(`${chosenId}\r`))
     {
         return
     }
