@@ -5,8 +5,8 @@ const fetchMap = async () =>
     let content = await fetch("FE2_MapTest.txt")
     let chosenId = await content.text()
 
-    let idArray = chosenId.split("/\r?\n/")
-    console.log(idArray)
+    let idArray = chosenId.split("\n")
+    console.log(`${chosenId}\r`)
     if (!idArray.includes(`${chosenId}\r`))
     {
         return
